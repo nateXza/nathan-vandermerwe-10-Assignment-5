@@ -15,5 +15,4 @@ CropGuardian detects crop diseases in real-time using CNNs. Farmers upload image
 3. [Test Cases](test-cases.md)  
 4. [Reflection](reflection.md)  
 
-## Setup  
-[Add setup instructions here if required.]  
+
