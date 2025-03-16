@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     A[Farmer] -->|Upload Image| UC1[Upload Image for Analysis]
     A -->|View Prediction| UC2[View Disease Prediction]
@@ -7,7 +8,9 @@ graph TD
     D[Government Agency] -->|Monitor Outbreaks| UC6[View Disease Heatmap]
     E[IT Team] -->|Retrain Model| UC7[Update Model with New Data]
     F[System Admin] -->|Manage Users| UC8[Add/Remove Users]
+    
     UC1 --> UC2
     UC2 --> UC3
-    UC4 --> UC6
-    UC5 --> UC7
+    UC4 -->|Data Validation| UC6
+    UC5 -->|Updated Data| UC7
+```
