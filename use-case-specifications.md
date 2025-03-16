@@ -1,7 +1,7 @@
  
-**Purpose**: Detailed specifications for critical use cases.  
-**Content**:  
-```markdown
+Detailed specifications for critical use cases.  
+  
+
 # Use Case Specifications  
 
 ## 1. Upload Crop Image  
