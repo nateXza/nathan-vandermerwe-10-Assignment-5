@@ -1,32 +1,13 @@
-# Use Case Diagram  
-
-## Mermaid Code
-
-```mermaid
-flowchart TD
-    actor User as "User"
-    actor Wearable as "Wearable Device"
-    actor Healthcare as "Healthcare Professional"
-    actor DataAnalyst as "Data Analyst"
-    actor Admin as "System Admin"
-    actor MobileApp as "Mobile App"
-
-    User --> TrackSteps["Track Steps"]
-    User --> MonitorHR["Monitor Heart Rate"]
-    User --> CalculateCalories["Calculate Calories"]
-    User --> TrackDistance["Track Distance"]
-    User --> ViewHistory["View Fitness History"]
-    User --> UpdateProfile["Update Profile"]
-    User --> ReceiveNotifications["Receive Notifications"]
-    Wearable -- "Sync Data" --> TrackSteps
-    Wearable -- "Sync Data" --> MonitorHR
-    MobileApp --> GenerateRecs["Generate Recommendations"]
-    Healthcare --> ViewReports["View Patient Reports"]
-    DataAnalyst --> AnalyzeData["Analyze Trends"]
-    Admin --> ManageUsers["Manage User Accounts"]
-
-    %% Relationships
-    TrackSteps -.->|Include| SyncData["Sync Data"]
-    MonitorHR -.->|Include| SyncData
-    GenerateRecs -->|Extend| AnalyzeData
-```
+graph TD
+    A[Farmer] -->|Upload Image| UC1[Upload Image for Analysis]
+    A -->|View Prediction| UC2[View Disease Prediction]
+    A -->|Generate Report| UC3[Generate PDF Report]
+    B[Agricultural Officer] -->|Validate Results| UC4[Validate Prediction Accuracy]
+    C[Researcher] -->|Download Dataset| UC5[Access Anonymized Dataset]
+    D[Government Agency] -->|Monitor Outbreaks| UC6[View Disease Heatmap]
+    E[IT Team] -->|Retrain Model| UC7[Update Model with New Data]
+    F[System Admin] -->|Manage Users| UC8[Add/Remove Users]
+    UC1 --> UC2
+    UC2 --> UC3
+    UC4 --> UC6
+    UC5 --> UC7
