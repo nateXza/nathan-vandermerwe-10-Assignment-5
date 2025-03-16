@@ -1,0 +1,32 @@
+# Use Case Diagram  
+
+## Mermaid Code
+
+```mermaid
+flowchart TD
+    actor User as "User"
+    actor Wearable as "Wearable Device"
+    actor Healthcare as "Healthcare Professional"
+    actor DataAnalyst as "Data Analyst"
+    actor Admin as "System Admin"
+    actor MobileApp as "Mobile App"
+
+    User --> TrackSteps["Track Steps"]
+    User --> MonitorHR["Monitor Heart Rate"]
+    User --> CalculateCalories["Calculate Calories"]
+    User --> TrackDistance["Track Distance"]
+    User --> ViewHistory["View Fitness History"]
+    User --> UpdateProfile["Update Profile"]
+    User --> ReceiveNotifications["Receive Notifications"]
+    Wearable -- "Sync Data" --> TrackSteps
+    Wearable -- "Sync Data" --> MonitorHR
+    MobileApp --> GenerateRecs["Generate Recommendations"]
+    Healthcare --> ViewReports["View Patient Reports"]
+    DataAnalyst --> AnalyzeData["Analyze Trends"]
+    Admin --> ManageUsers["Manage User Accounts"]
+
+    %% Relationships
+    TrackSteps -.->|Include| SyncData["Sync Data"]
+    MonitorHR -.->|Include| SyncData
+    GenerateRecs -->|Extend| AnalyzeData
+```
